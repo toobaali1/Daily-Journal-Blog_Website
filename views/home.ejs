@@ -5,10 +5,16 @@
 
 <% for(let i = 0; i < newPostTitle.length; i++){ %>
     <h2> <%= newPostTitle[i] %> </h2>
-    <p> <%= newPostContent[i] %> </p>
+  
+  <%  if(newPostContent[i].length > 100) { %>
+        <p> <%= xyz[i] %> ..<a href= <%= "/" + newPostTitle[i] %>> Read more</a> </p>
+  <%  } else{ %>
+        <p> <%= newPostContent[i] %> </p>
+   <% } %>
+
+   
 <% } %>
-
-
 
 <%- include("footer") -%>
     
+
