@@ -1,0 +1,14 @@
+<%- include("header") -%>
+
+<h1> <%= pageTitle %> </h1>
+<p>Welcome to home! </p>
+
+<% for(let i = 0; i < newPostTitle.length; i++){ %>
+    <h2> <%= newPostTitle[i] %> </h2>
+    <p> <%= newPostContent[i] %> </p>
+<% } %>
+
+
+
+<%- include("footer") -%>
+    
