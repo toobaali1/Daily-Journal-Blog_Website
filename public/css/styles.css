@@ -1,18 +1,29 @@
 body{
-    margin-bottom: 100px;
-    background-color: red;
+    background-image: linear-gradient(to right, #effcef, #e7f8e7, #def4e0, #d5f1d9, #ccedd2);
+    padding-bottom: 100px;
+}
+
+.mainContent{
+    margin: 20px 40px;
+}
+
+.titleAnchor{
+    color: #000;
+}
+
+.titleAnchor:hover{
+    color: #000;
+    text-decoration: none;
 }
 footer{
     position: fixed;
     bottom: 0;
-    height: 50px;
-    background-color: #cee397;
+    height: 60px;
+    background-color: #ccedd2;
+    color: #655c56;
     width: 100%;
-    text-align: center;
-}
-
-form{
-    margin: auto 50px;
+    text-align: center; 
+    padding-top: 10px;
 }
 
 .postTitle{

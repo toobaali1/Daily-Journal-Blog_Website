@@ -8,14 +8,14 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const blogArray = [];
-const homePage = "Welcome to home!!!!"
-const contactPage = "Contact us at xxxxxxxx";
+const homePage = "Welcome to my daily journal!!!!"
+const contactPage = "Contact us at xxxxxxxx@xxxx.com";
 const aboutPage = "Info About US! Know more.....";
 
 
 app.get("/", function(req,res){
     // change keys and values to pass an array
-    res.render("home", {pageTitle: "Home", pageContent:homePage, wholeBlog: blogArray });    
+    res.render("home", {pageTitle: "HOME", pageContent:homePage, wholeBlog: blogArray });    
 });
 
 app.get("/compose", function(req,res){

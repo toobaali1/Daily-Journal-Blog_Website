@@ -4,7 +4,7 @@
 <p><%= pageContent %> </p>
 
 <% wholeBlog.forEach(function(i){ %>
-      <h2> <%= i.title %> </h2>
+      <h2> <a class="titleAnchor" href="/posts/<%=i.title%>"><%= i.title %> </a></h2>
       <%  if(i.content.length > 100) { %>
       <p><%= i.content.slice(0,100) %> ...  <a href="/posts/<%=i.title%>">Read More</a></p> 
       <% } else { %>
