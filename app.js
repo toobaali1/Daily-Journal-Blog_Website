@@ -44,7 +44,7 @@ app.post("/compose", function(req,res){
         title: newBlogTitle,
         content: newBlogContent
     });
-    
+
     blog.save();
     res.redirect("/");
 });
@@ -57,14 +57,25 @@ app.get("/contact", function(req,res){
     res.render("blog", {pageTitle: "Contact Us", pageContent: contactPage});
 });
 
-app.get("/posts/:postname", function(req,res){
-    let parameterVar = req.params.postname;
-
-    blogArray.forEach(function(i){
-        if(_.lowerCase(parameterVar) === _.lowerCase(i.title)){
-            res.render("blog", {pageTitle: i.title , pageContent: i.content});
+app.get("/posts/:postId", function(req,res){
+    let parameterVar = req.params.postId;
+    
+    Blog.findOne({_id : parameterVar}, function(err, foundBlog){
+        if(foundBlog){
+            res.render("blog", {pageTitle: foundBlog.title , pageContent: foundBlog.content});
+        } 
+        else{
+            Blog.findOne({title : _.lowerCase(parameterVar)}, function(err, foundBlog){
+                if(foundBlog){
+                    res.render("blog", {pageTitle: foundBlog.title , pageContent: foundBlog.content});
+                } 
+                else{
+                    res.send("BLOG POST NOT FOUND")
+                }
+            });
+                
         }
- 
+    
     });
 
 });

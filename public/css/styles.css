@@ -2,9 +2,19 @@ body{
     background-image: linear-gradient(to right, #effcef, #e7f8e7, #def4e0, #d5f1d9, #ccedd2);
     padding-bottom: 100px;
 }
-
+h1{
+    font-size: 3rem; 
+    font-weight: bold;
+}
+h2{
+    font-size: 2.5rem;
+}
+p{
+    font-size: 1.3rem;
+}
 .mainContent{
-    margin: 20px 40px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 40px 80px;
 }
 
 .titleAnchor{
